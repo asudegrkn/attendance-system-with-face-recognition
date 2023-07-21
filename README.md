@@ -1,4 +1,4 @@
-# attendance-system-with-face-recognition
+# Yüz Tanıma İle Yoklama Sistemi
 
 ![](https://img.shields.io/badge/python-blue?style=for-the-badge&logo=python&logoColor=white)
 ![]( https://img.shields.io/badge/JavaScript-yellow?style=for-the-badge&logo=javascript&logoColor=white)
