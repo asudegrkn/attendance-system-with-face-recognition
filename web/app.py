@@ -4,8 +4,8 @@ from datetime import datetime, timedelta
 
 
 app = Flask(__name__)
-app.config['DERS'] = None #global değişken
-app.config['SECRET_KEY'] = "erawebsiteforuni" # flask veri güvenliği
+app.config['DERS'] = None 
+app.config['SECRET_KEY'] = "erawebsiteforuni" 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:123456@localhost/attendace'
 db = SQLAlchemy(app)
 
@@ -22,7 +22,7 @@ class Teacher(db.Model):
     faculty = db.Column(db.String)
     department = db.Column(db.String)
     photo = db.Column(db.String)
-    courses = db.relationship('Lesson', backref='teacher', lazy=True) #ilişkili nesneler yalnızca erişildiğinde yüklenir bu sayede performansta iyileşme sağlanır
+    courses = db.relationship('Lesson', backref='teacher', lazy=True) 
 
 class Lesson(db.Model):
     __tablename__ = 'lesson'
@@ -124,9 +124,9 @@ def ders_count(start_date, end_date):
     count = 0
     current_date = start_date
 
-    # start_date'den end_date'e kadar döngü
+
     while current_date <= end_date:
-        # Eğer gün Pazartesi ise count'u artır
+       
         if current_date.weekday() == 0:  # Pazartesi: 0, Salı: 1, ...
             count += 1
 
